@@ -1,9 +1,9 @@
 /* jammer */
 
-int pin = 1;
-int start_freq = 23000;
-int stop_freq = 27000;
-int freq_step = 100;
+short pin = 1;
+short start_freq = 23000;
+short stop_freq = 27000;
+short freq_step = 100;
  
 void setup() {
 
@@ -11,17 +11,16 @@ void setup() {
 
 void loop() {
 
-  int i = start_freq;
+  short i = start_freq;
   while(i <= stop_freq){
-    toneout(i);
-    
-    //freq_step = random(50, 500);
+    toneout(i);  
+    freq_step = random(50, 500);
     i+=freq_step;
     }
 }
 
-void toneout(int freq){
-  int i = 0;
+void toneout(short freq){
+  short i = 0;
   while (i < 10){
     tone(pin, freq);
     i++;
