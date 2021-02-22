@@ -1,10 +1,9 @@
 /* jammer */
 
 int pin = 1;
-int freq_step = 100;
 int start_freq = 23000;
 int stop_freq = 27000;
-
+int freq_step = 100;
  
 void setup() {
 
